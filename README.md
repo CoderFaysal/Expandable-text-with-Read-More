@@ -16,21 +16,28 @@ implementation 'com.borjabravo:readmoretextview:2.1.0'
 maven {url ("https://jcenter.bintray.com")}
 ```
 
+### Step 3: Add Maven in gradle.properties file
+
+```
+android.enableJetifier=true
+```
+
+
 ### now click on Sync now it will sync your all files
 
-### Step 3: Create a new Expandable text with Read More in your activity_main.xml file
+### Step 4: Create a new Expandable text with Read More in your activity_main.xml file
 
 ```
 <com.borjabravo.readmoretextview.ReadMoreTextView
-        android:id="@+id/brtxt"
+        android:id="@+id/text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="This is Expandable text this is a simple text, this is a testing text"
         android:textSize="20sp"
-        app:trimExpandedText="@string/read_more"
-        app:trimCollapsedText="@string/read_less"
+        app:trimExpandedText="@string/read_less"
+        app:trimCollapsedText="@string/read_more"
         app:trimMode="trimModeLength"
-        app:trimLength="27"
+        app:trimLength="25"
         app:colorClickableText="#039BE5"
         />
 ```
